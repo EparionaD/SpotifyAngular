@@ -1,25 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SpotifyService } from '../../servicios/spotify.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css']
     })
-    export class HomeComponent implements OnInit {
+    export class HomeComponent  {
 
     albumnes:any[] = [];
 
-    constructor(private _servicio:SpotifyService){
+    constructor(private _servicio:SpotifyService, private _ruta:Router){
         this._servicio.getAlbum().subscribe(
             (respuesta:any)=>{
                 //console.log(respuesta);
-                this.albumnes = respuesta.albums.items;
+                this.albumnes = respuesta;
             }
         );
     }
 
-    ngOnInit() {
+    verArtista(id:any){
+        this._ruta.navigate(['artista',id]);
     }
 
 }

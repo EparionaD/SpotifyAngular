@@ -5,9 +5,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-4" *ngFor="let item of albumnes">
+        <div class="col-4" *ngFor="let item of albumnes" (click)="verArtista(item.artists[0].id)">
             <div class="card mb-3">
-                <img src="{{ item.images[0].url }}" class="card-img-top" alt="{{ item.name }}">
+                <img src="{{ item.images | imagen }}" class="card-img-top" alt="{{ item.name }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ item.name }}</h5>
                     <div>

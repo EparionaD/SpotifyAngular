@@ -13,6 +13,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { ImagenPipe } from './pipes/imagen.pipe';
+import { ArtistaComponent } from './components/artista/artista.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +22,9 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
         HeaderComponent,
         HomeComponent,
         BuscarComponent,
-        NotfoundComponent
+        NotfoundComponent,
+        ImagenPipe,
+        ArtistaComponent
     ],
     imports: [
         BrowserModule,
