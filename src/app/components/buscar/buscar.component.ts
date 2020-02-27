@@ -20,7 +20,7 @@ export class BuscarComponent implements OnInit {
 
         this._buscar.getBuscar(palabra).subscribe(
             (respuesta:any)=>{
-                console.log(respuesta);
+                //console.log(respuesta);
                 this.artistas = respuesta;
             }
         );
