@@ -10,13 +10,17 @@ import { Router } from '@angular/router';
     export class HomeComponent  {
 
     albumnes:any[] = [];
+    cargar:boolean;
 
     constructor(private _servicio:SpotifyService, private _ruta:Router){
+        this.cargar = true;
         this._servicio.getAlbum().subscribe(
             (respuesta:any)=>{
                 //console.log(respuesta);
                 this.albumnes = respuesta;
+                this.cargar = false;
             }
+            
         );
     }
 

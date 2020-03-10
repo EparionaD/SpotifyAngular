@@ -15,6 +15,7 @@ import { BuscarComponent } from './components/buscar/buscar.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { ImagenPipe } from './pipes/imagen.pipe';
 import { ArtistaComponent } from './components/artista/artista.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { ArtistaComponent } from './components/artista/artista.component';
         BuscarComponent,
         NotfoundComponent,
         ImagenPipe,
-        ArtistaComponent
+        ArtistaComponent,
+        LoadingComponent
     ],
     imports: [
         BrowserModule,

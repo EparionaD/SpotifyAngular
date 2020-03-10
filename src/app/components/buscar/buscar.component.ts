@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class BuscarComponent implements OnInit {
 
     artistas:any[] = [];
+    cargarbuscar:boolean;
 
     constructor(private _buscar:SpotifyService, private _ruta:Router) { }
 
@@ -17,11 +18,12 @@ export class BuscarComponent implements OnInit {
     }
 
     buscarArt(palabra){
-
+        this.cargarbuscar = true;
         this._buscar.getBuscar(palabra).subscribe(
             (respuesta:any)=>{
                 //console.log(respuesta);
                 this.artistas = respuesta;
+                this.cargarbuscar = false;
             }
         );
     }
